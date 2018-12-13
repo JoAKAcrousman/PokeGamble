@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>PokeGamble</title>
+		<link rel="stylesheet" href="style_pokegamble.css">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,
+		maximum-scale=1.0, user-scalable=no">
+
+	</head>
+	<body>
+		<h1 id="site-title">Poke Gamble</h1>
+		<div id="wrapper">
+			<div id="page 1" class="page page-active">
+				<section id="computed">
+					<section id="player1">
+						<h2 id="name1">Player 1</h2>
+						<img id="Misty" class="character-picture-p1 picture-active"
+						alt="picture of the character" src="img/misty.png"/>
+						<div class="separator"></div>
+						<form class="form">
+							<li class="bold">name
+									<input id="inputName1" class="input" type="text" name="inputName" value=""/>
+							</li>
+						</form>
+					</section>
+					<section id="player2">
+						<h2 id="name2">Player 2</h2>
+						<img id="Ash" class="character-picture-p1 picture-active"
+						alt="picture of the character" src="img/ash.png"/>
+						<div class="separator"></div>
+						<form class="form">
+							<li class="bold">name
+									<input id="inputName2" class="input" type="text" name="inputName" value=""/>
+							</li>
+						</form>
+					</section>
+				</section>
+				
+				<section id="formSection">
+					<form id="form">
+						<li class="bold">bet
+									<input id="bet" type="text" class="input" name="inputName" value=""/>
+						</li>
+						<input id="button" type="submit" value="Catch'em all!" class="bold"/>
+					</form>
+				</section>
+			</div>
+			<div id="page 2" class="page page-inactive">
+				<section id="computed">
+					<section id="player1">
+						<section class="presPlayer">
+							<h2 id="name1">NomPlayer 1</h2>
+							<section>
+								<img id="Misty" class="character-picture-p2"
+								alt="picture of the character" src="img/misty.png"/>
+								<div class="separator"></div>
+							</section>
+						</section>
+						<img id="imgPokemon1" class="pokemon-picture"
+						alt="pokemon1" src="img/Togepi.png"/>
+						<h3 id="name-pokemon1">NomPokemon1</h3>
+					</section>
+				
+				
+					<section id="player2">
+						<section class="presPlayer">
+							<section>
+								<img id="Ash" class="character-picture-p2"
+								alt="picture of the character" src="img/ash.png"/>
+								<div class="separator"></div>
+							</section>
+							<h2 id="name2">NomPlayer 2</h2>
+						</section>
+						<img id="imgPokemon2" class="pokemon-picture"
+						alt="pokemon2" src="img/pika.png"/>
+						<h3 id="name-pokemon2">NomPokemon2</h3>
+						</form>
+					</section>
+				
+				</section>
+				<input id="FIGHT" type="submit" value="FIGHT !!!" class="bold"/>
+
+			</div>
+
+		<div id="endscreen"></div>
+			<div id="popup"></div>
+			<div id="modal">
+				<section class="text">
+					<h2 id="nameWinner">NameWinner </h2>
+					<h2 id="Wins"> WINS !!!</h2>
+				</section>
+				<img id="MistyWinner" class="winner-picture"
+				alt="gif misty" src="https://media.giphy.com/media/yd1p7Gp8EdauY/giphy.gif"/>
+				<img id="AshWinner" class="loser-picture"
+				alt="gif ash" src="https://media.giphy.com/media/amrNGnZUeWhZC/giphy.gif"/>
+				<section class="text">
+					<h2 id="nameLoser">NameLoser </h2>
+					<h2 id="Wins">  YOU LOSE  </h2>
+					<h2 id="bet"> Bet </h2>
+				</section>
+				<input id="retry" type="submit" value="GET YOUR REVENGE !!!" class="bold"/>
+		</div>
+		</div>
+		<script src="main_pokegamble.js"></script>
+	</body>
+</html>

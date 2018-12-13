@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+#site-title {
+	font-size: 45px;
+	text-align: center;
+	margin-top:25px
+}
+body{
+	background-image:linear-gradient(to top, #F01B1B, #8B2121);
+	position: relative;
+	color:#fff /*rgb(12, 39, 12)*/;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+}
+
+
+#wrapper {
+	width:768px;
+	margin: 30px auto 30px auto;
+	position;relative;
+}
+
+.page{
+	display: none;
+}
+.page-active{
+	display: block;
+}
+
+li {
+	list-style: none;
+}
+
+#computed {
+	display: flex;
+	width: 768px;
+}
+#player1, #player2 {
+	width: 384px;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+}
+
+.separator{
+	background-color: white;
+	height:2px;
+	width:45%;
+	margin-bottom: 30px;
+}
+
+#form {
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	width: 768px;
+}
+
+.input{
+	border: none;
+	border-bottom: 2px solid #fff;
+	background: none;
+}
+
+.character-picture-p1 {
+	height:200px
+}
+
+
+
+
+
+.presPlayer{
+	display: flex;
+}
+
+#button, #retry,#FIGHT{
+	background: none;
+	border-radius: 2px;
+	margin-top:20px;
+	padding: 5px 30px;
+
+}
+#button, #FIGHT {
+	border: 2px solid #fff;
+	color:white;
+	margin-bottom: 
+}
+#button:hover, #FIGHT:hover {
+	background-color: white;
+	color: 8B2121;
+}
+
+
+.character-picture-p2 {
+	height:100px;
+	margin-right: 10px;
+}
+.pokemon-picture {
+	height:200px;
+}
+#endscreen{
+	position:absolute;
+}
+
+#popup{
+	position: absolute;
+	width: auto;
+	height: auto;
+	background-color: black;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	animation: shade 2s forwards;
+	display: none;
+}
+@keyframes shade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.7;
+	}
+}
+
+#modal{
+	background-color: white;
+	color: red;
+	width: 400px;
+	height: 400px;
+	border-radius: 2px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation: showUp 2s forwards;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+	display: none;
+}
+
+@keyframes showUp {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.picture-inactive{
+	display:none;
+}
+.winner-picture{
+	height: 200px;
+}
+.text {
+	display:flex;
+}
+
+#retry {
+	border: 2px solid red;
+	color:red;
+}
+#retry:hover {
+	background-color: red;
+	color: white;
+}
