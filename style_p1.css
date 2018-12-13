@@ -1,13 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
 #site-title {
 	font-size: 45px;
 	text-align: center;
+	margin-top:25px
 }
 body{
 	background-image:linear-gradient(to top, #F01B1B, #8B2121);
 	position: relative;
-	font-family: 'Inconsolata', monospace;
 	color:#fff /*rgb(12, 39, 12)*/;
-	font-size:24px;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	font-smooth: never;
+	-webkit-font-smoothing: none;
 }
 
 
@@ -56,7 +61,7 @@ li {
 #button {
 	background: none;
 	border: 2px solid #fff;
-	border-radius: 20px;
+	border-radius: 2px;
 	margin-top:20px;
 	color:white;
 	padding: 5px 30px;
