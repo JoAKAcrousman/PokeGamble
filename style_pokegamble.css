@@ -171,3 +171,15 @@ li {
 	background-color: red;
 	color: white;
 }
+
+@media (max-width: 768px) {
+	#computed, #form, #wrapper {
+		width: auto;
+	}
+	#player1, #player2 {
+		margin: auto;
+	}
+	#form {
+		position: initial;
+	}
+}
