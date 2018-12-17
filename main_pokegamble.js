@@ -1,18 +1,7 @@
-/*const siteTitle = document.querySelector('#site-tite');
+/*const siteTitle = document.querySelector('#site-title');
 console.log(siteTitle)
 const statList = document.querySelectorAll('.stat');
 statList.forEach(function(element) {console.log(element.innerHTML);})
-
-
-const nameInput = document.querySelector('#inputName');
-const name = document.querySelector('#name');
-const changeName = (value, element) => element.innerHTML = value || 'Default';
-nameInput.addEventListener('keyup', event => changeName(event.target.value,name));
-
-const button = document.querySelector('input[type="submit"]');
-const selector = document.querySelector('select');
-const module = document.querySelector('#end-module');
-const fond = document.querySelector('#end-background');
 
 const changeImg = (value) => {
 	const cur = document.querySelector('.picture-active');
@@ -20,12 +9,6 @@ const changeImg = (value) => {
 	const newCur = document.querySelector(`#${value}`);
 	newCur.classList.add('picture-active');
 };
-
-selector.addEventListener('change', event => changeImg(event.target.value));
-
-
-const congrats = document.querySelector('#congrats');
-const characterName = document.querySelector('#character-name');
 
 const openModule = (button, popup, endscreen) => {
 	button.preventDefault();
@@ -41,25 +24,27 @@ button.addEventListener('click', event => openModule(event, module, fond));
 */
 //poke gamble
 
+
+//CHANGER NOMS PLAYERS
 const nameInput1 = document.querySelector('#inputName1');
-const name1 = document.querySelector('#name1');
+const name1p1 = document.querySelector('#name1');
+const name1p2 = document.querySelector('#name1p2');
 const nameInput2 = document.querySelector('#inputName2');
-const name2 = document.querySelector('#name2');
-const changeName = (value, element) => element.innerHTML = value || 'Player Name';
-nameInput1.addEventListener('keyup', event => changeName(event.target.value,name1));
-nameInput2.addEventListener('keyup', event => changeName(event.target.value,name2));
+const name2p1 = document.querySelector('#name2');
+const name2p2 = document.querySelector('#name2p2');
+const changeName = (value, element1,element2) =>(element1.innerHTML = value || 'Player Name')&&(element2.innerHTML = value || 'Player Name');
+nameInput1.addEventListener('keyup', event => changeName(event.target.value,name1p1,name1p2));
+nameInput2.addEventListener('keyup', event => changeName(event.target.value,name2p1,name2p2));
+
+//CHANGER BET
+const betInput = document.querySelector('#inputbet');
+const bet = document.querySelector('#bet');
+const changeBet = (value, element) => element.innerHTML = value || 'The Bet';
+betInput.addEventListener('keyup', event => changeBet(event.target.value,bet));
 
 
-const changePage = (button) => {
-	button.preventDefault();
-	const cur = document.querySelector('.page-active');
-	cur.classList.remove('page-active');
-	const newCur = document.querySelector('.page-inactive');
-	newCur.classList.remove('page-inactive');
-	newCur.classList.add('page-active');
-	cur.classList.add('page-inactive');
-};
 
+//POPUP
 const openModule = (button, popup, modal) => {
 	//button.preventDefault();
 	popup.style.display = "block";
@@ -74,15 +59,27 @@ const closeModule = (button, popup, modal) => {
 	popup.style.display = "none";
 	modal.style.display = "none";
 };
-	
+FIGHT.addEventListener('click', event => openModule(FIGHT, modal, popup));
+
+
+//CHANGER PAGE
+const changePage = (button) => {
+	button.preventDefault();
+	const cur = document.querySelector('.page-active');
+	cur.classList.remove('page-active');
+	const newCur = document.querySelector('.page-inactive');
+	newCur.classList.remove('page-inactive');
+	newCur.classList.add('page-active');
+	cur.classList.add('page-inactive');
+};
 const returnPage1 = (button, popup, modal) => {
 	changePage(event, retry);
 	closeModule(button, popup, modal);
 };
-
 button.addEventListener('click', event => changePage(event, button));
-FIGHT.addEventListener('click', event => openModule(FIGHT, modal, popup));
 retry.addEventListener('click', event => returnPage1(retry,modal,popup));
+
+
 
 
 //PARTIE AVEC L'API
