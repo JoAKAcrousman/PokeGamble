@@ -94,11 +94,11 @@ function getRandomInt(max) {
 }
 
 const typesList = {
-	"types": [9/*fire*/, 10/*water*/, 11/*grass*/]
+	"types": [9/*fire*/, 10/*water*/, 11/*grass*/, 12/*electric*/, 2/*flying*/, 4/*ground*/]
 }
 
 const selectType = typesList => {
-		const nb = getRandomInt(3);
+		const nb = getRandomInt(6);
 		return typesList.types[nb];
 }
 	
@@ -226,6 +226,45 @@ const selectWinner = type1 => {
 			winnerName(1);
 		}
 		else if (type2 === 10) {
+			winnerName(0);
+		}
+		else {
+			const nb = getRandomInt(2);
+			console.log("aleatoire")
+			winnerName(nb);
+		}
+	}
+	if (type1 === 12) {
+		if (type2 === 4) {
+			winnerName(1);
+		}
+		else if (type2 === 2) {
+			winnerName(0);
+		}
+		else {
+			const nb = getRandomInt(2);
+			console.log("aleatoire")
+			winnerName(nb);
+		}
+	}
+	if (type1 === 2) {
+		if (type2 === 12) {
+			winnerName(1);
+		}
+		else if (type2 === 4) {
+			winnerName(0);
+		}
+		else {
+			const nb = getRandomInt(2);
+			console.log("aleatoire")
+			winnerName(nb);
+		}
+	}
+	if (type1 === 4) {
+		if (type2 === 2) {
+			winnerName(1);
+		}
+		else if (type2 === 12) {
 			winnerName(0);
 		}
 		else {
