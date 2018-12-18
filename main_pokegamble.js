@@ -50,7 +50,7 @@ const openModule = (button, popup, modal) => {
 	popup.style.display = "block";
 	modal.style.display = "block";
 	//characterName.innerHTML = name.innerHTML;
-	const character = document.querySelector('#end-picture');
+	const character = document.querySelector('.winner-picture');
 	const activepic = document.querySelector('.picture-active');
 	character.style.background = `url('${activepic.src}') no-repeat top`;
 };
@@ -99,19 +99,19 @@ const typesList = {
 
 const selectType = typesList => {
 		const nb = getRandomInt(3);
-		selectedType = typesList.types[nb];	
-	}
+		return typesList.types[nb];
+}
 	
+//select type for the first pokemon	
+	const type1 = selectType(typesList);
+	console.log(type1)
 
 fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(data => {
-	selectType(typesList);
 
-	console.log(selectedType)
 	console.log(data)
+	console.log(type1)
 	
-	console.log(selectedType)
-	
-	const selectedTypeUrl = data.results[selectedType].url
+	const selectedTypeUrl = data.results[type1].url
 	
 	console.log(selectedTypeUrl)
 	
@@ -137,15 +137,17 @@ fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(
 	});
 });
 
-fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(data => {
-		selectType(typesList);
 
-	console.log(selectedType)
+//select type for the second pokemon
+const type2 = selectType(typesList);
+console.log(type2)
+
+fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(data => {
+
 	console.log(data)
+	console.log(type2)
 	
-	console.log(selectedType)
-	
-	const selectedTypeUrl = data.results[selectedType].url
+	const selectedTypeUrl = data.results[type2].url
 	
 	console.log(selectedTypeUrl)
 	
@@ -170,3 +172,45 @@ fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(
 		});
 	});
 });
+
+
+
+//CHANGER LES NOMS SUR LE POPUP
+
+const nameWinner=document.querySelector('#nameWinner');
+const nameLoser=document.querySelector('#nameLoser');
+
+const winnerName = winner => {
+	if (winner === 0) {
+		nameWinner.innerHTML = name1p2.innerHTML;
+		nameLoser.innerHTML = name2p2.innerHTML;
+	}
+	else {
+		nameWinner.innerHTML = name2p2.innerHTML;
+		nameLoser.innerHTML = name1p2.innerHTML;
+	}
+}
+
+
+//DETERMINER LE GAGNANT
+
+const selectWinner = type1 => {
+	const winner = 0;
+	if (type1 === 9) {
+		if (type2 === 10) {
+			winner = 1;
+			winnerName(winner);
+		}
+		if (type2 === 11) {
+			winner = 0;
+			winnerName(winner);
+		}
+		else {
+			console.log("aleatoire")
+			const nb = getRandomInt(2)
+			winnerName(nb);
+		}
+	}
+}
+
+selectWinner(type1);
