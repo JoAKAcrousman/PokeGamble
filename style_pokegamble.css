@@ -15,11 +15,17 @@ body{
 	-webkit-font-smoothing: none;
 }
 
+#wrapper, #computed, #form, #sectionFight{
+	width:768px;
+}
 
 #wrapper {
-	width:768px;
 	margin: 30px auto 30px auto;
 	position;relative;
+}
+
+h2{
+	font-size: 15px;
 }
 
 .page{
@@ -33,9 +39,9 @@ li {
 	list-style: none;
 }
 
-#computed {
+#computed,#sectionFight,#sectionModal, .presPlayer {
 	display: flex;
-	width: 768px;
+	justify-content: center;
 }
 #player1, #player2 {
 	width: 384px;
@@ -47,7 +53,7 @@ li {
 .separator{
 	background-color: white;
 	height:2px;
-	width:45%;
+	width:75%;
 	margin-bottom: 30px;
 }
 
@@ -56,7 +62,6 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items:center;
-	width: 768px;
 }
 
 .input{
@@ -69,14 +74,6 @@ li {
 	height:200px
 }
 
-
-
-
-
-.presPlayer{
-	display: flex;
-}
-
 #button, #retry,#FIGHT{
 	background: none;
 	border-radius: 2px;
@@ -87,8 +84,9 @@ li {
 #button, #FIGHT {
 	border: 2px solid #fff;
 	color:white;
-	margin-bottom: 
 }
+
+
 #button:hover, #FIGHT:hover {
 	background-color: white;
 	color: 8B2121;
@@ -102,8 +100,11 @@ li {
 .pokemon-picture {
 	height:200px;
 }
+
+
 #endscreen{
 	position:absolute;
+	margin:none;
 }
 
 #popup{
@@ -127,22 +128,26 @@ li {
 	}
 }
 
+#modal, #sectionModal{
+	width:400px;
+	height: 400px;
+}
 #modal{
 	background-color: white;
 	color: red;
-	width: 400px;
-	height: 400px;
 	border-radius: 2px;
 	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	animation: showUp 2s forwards;
 	position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-	display: none;
+	display: none
+}
+#sectionModal{
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
 }
 
 @keyframes showUp {
@@ -158,6 +163,9 @@ li {
 }
 .winner-picture{
 	height: 200px;
+}
+.loser-picture{
+	display:none;
 }
 .text {
 	display:flex;
@@ -184,6 +192,6 @@ li {
 	}
 }
 
-#nameWinner, #nameLose, #Wins {
+#nameWinner, #nameLoser, #youlose {
 	margin-right: 20px;
 }

@@ -79,29 +79,34 @@
 					</section>
 				
 				</section>
-				<input id="FIGHT" type="submit" value="FIGHT !!!" class="bold"/>
-
+				<section id="sectionFight">
+					<input id="FIGHT" type="submit" value="FIGHT !!!" class="bold"/>
+				</section>
 			</div>
-
+		</div>
 		<div id="endscreen"></div>
 			<div id="popup"></div>
 			<div id="modal">
-				<section class="text">
-					<h2 id="nameWinner">NameWinner </h2>
-					<h2 id="Wins"> WINS !!!</h2>
+				<section id="sectionModal">
+					<section class="text">
+						<h2 id="nameWinner">NameWinner </h2>
+						<h2 id="Wins"> WINS !!!</h2>
+					</section>
+					<img id="MistyWinner"
+					alt="gif misty" src="https://media.giphy.com/media/yd1p7Gp8EdauY/giphy.gif"/>
+					<img id="AshWinner"
+					alt="gif ash" src="https://media.giphy.com/media/amrNGnZUeWhZC/giphy.gif"/>
+					<section class="text">
+						<h2 id="nameLoser">NameLoser </h2>
+						<h2 id="youlose">  YOU LOSE  </h2>
+						<h2 id="bet"> Bet </h2>
 				</section>
-				<img id="MistyWinner" class="winner-picture"
-				alt="gif misty" src="https://media.giphy.com/media/yd1p7Gp8EdauY/giphy.gif"/>
-				<img id="AshWinner" class="loser-picture"
-				alt="gif ash" src="https://media.giphy.com/media/amrNGnZUeWhZC/giphy.gif"/>
-				<section class="text">
-					<h2 id="nameLoser">NameLoser </h2>
-					<h2 id="Wins">  YOU LOSE  </h2>
-					<h2 id="bet"> Bet </h2>
+				
+					<input id="retry" type="submit" value="GET YOUR REVENGE !!!" class="bold" onClick="window.location.reload()"/>
 				</section>
-				<input id="retry" type="submit" value="GET YOUR REVENGE !!!" class="bold"/>
+			</div>
 		</div>
-		</div>
+		
 		<script src="main_pokegamble.js"></script>
 	</body>
 </html>

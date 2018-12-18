@@ -179,15 +179,22 @@ fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(
 
 const nameWinner=document.querySelector('#nameWinner');
 const nameLoser=document.querySelector('#nameLoser');
+const misty=document.querySelector('#MistyWinner');
+const ash=document.querySelector('#AshWinner');
+
 
 const winnerName = winner => {
 	if (winner === 0) {
 		nameWinner.innerHTML = name1p2.innerHTML;
 		nameLoser.innerHTML = name2p2.innerHTML;
+		misty.classList.add('winner-picture');
+		ash.classList.add('loser-picture');
 	}
 	else {
 		nameWinner.innerHTML = name2p2.innerHTML;
 		nameLoser.innerHTML = name1p2.innerHTML;
+		misty.classList.add('loser-picture');
+		ash.classList.add('winner-picture');
 	}
 }
 
