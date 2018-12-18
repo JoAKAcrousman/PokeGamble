@@ -195,15 +195,12 @@ const winnerName = winner => {
 //DETERMINER LE GAGNANT
 
 const selectWinner = type1 => {
-	const winner = 0;
 	if (type1 === 9) {
 		if (type2 === 10) {
-			winner = 1;
-			winnerName(winner);
+			winnerName(1);
 		}
-		if (type2 === 11) {
-			winner = 0;
-			winnerName(winner);
+		else if (type2 === 11) {
+			winnerName(0);
 		}
 		else {
 			console.log("aleatoire")
@@ -211,6 +208,32 @@ const selectWinner = type1 => {
 			winnerName(nb);
 		}
 	}
+	if (type1 === 10) {
+		if (type2 === 11) {
+			winnerName(1);
+		}
+		else if (type2 === 9) {
+			winnerName(0);
+		}
+		else {
+			console.log("aleatoire")
+			const nb = getRandomInt(2)
+			winnerName(nb);
+		}
+	}
+	if (type1 === 11) {
+		if (type2 === 9) {
+			winnerName(1);
+		}
+		else if (type2 === 10) {
+			winnerName(0);
+		}
+		else {
+			const nb = getRandomInt(2);
+			console.log("aleatoire")
+			winnerName(nb);
+		}
+	}
 }
 
-selectWinner(type1);
+FIGHT.addEventListener('click', event => selectWinner(type1));
