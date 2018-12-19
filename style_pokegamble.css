@@ -44,6 +44,7 @@ li {
 #computed,#sectionFight,#sectionModal, .presPlayer {
 	display: flex;
 	justify-content: center;
+	width: auto;
 }
 #player1, #player2 {
 	width: 384px;
@@ -192,6 +193,7 @@ li {
 	#form {
 		position: initial;
 	}
+	
 }
 
 #nameWinner, #nameLoser, #youlose {
