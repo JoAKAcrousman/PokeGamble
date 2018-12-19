@@ -212,6 +212,7 @@ const selectWinner = type1 => {
 		else {
 			console.log("aleatoire")
 			const nb = getRandomInt(2)
+			console.log(nb)
 			winnerName(nb);
 		}
 	}
@@ -225,6 +226,7 @@ const selectWinner = type1 => {
 		else {
 			console.log("aleatoire")
 			const nb = getRandomInt(2)
+			console.log(nb)
 			winnerName(nb);
 		}
 	}
@@ -238,6 +240,7 @@ const selectWinner = type1 => {
 		else {
 			const nb = getRandomInt(2);
 			console.log("aleatoire")
+			console.log(nb)
 			winnerName(nb);
 		}
 	}
@@ -251,6 +254,7 @@ const selectWinner = type1 => {
 		else {
 			const nb = getRandomInt(2);
 			console.log("aleatoire")
+			console.log(nb)
 			winnerName(nb);
 		}
 	}
@@ -264,6 +268,7 @@ const selectWinner = type1 => {
 		else {
 			const nb = getRandomInt(2);
 			console.log("aleatoire")
+			console.log(nb)
 			winnerName(nb);
 		}
 	}
@@ -277,6 +282,7 @@ const selectWinner = type1 => {
 		else {
 			const nb = getRandomInt(2);
 			console.log("aleatoire")
+			console.log(nb)
 			winnerName(nb);
 		}
 	}

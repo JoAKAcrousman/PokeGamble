@@ -3,7 +3,7 @@
 #site-title {
 	font-size: 45px;
 	text-align: center;
-	margin-top:25px
+	padding-top:25px
 }
 body{
 	background-image:linear-gradient(to top, #F01B1B, #8B2121);
@@ -13,6 +13,8 @@ body{
 	font-size: 15px;
 	font-smooth: never;
 	-webkit-font-smoothing: none;
+	margin: 0;
+	height: 100%;
 }
 
 #wrapper, #computed, #form, #sectionFight{
