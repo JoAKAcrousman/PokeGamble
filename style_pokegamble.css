@@ -30,9 +30,11 @@ h2{
 	font-size: 15px;
 }
 
-.page{
-	display: none;
+.picture-inactive, .loser-picture, .page{
+	display:none;
 }
+
+
 .page-active{
 	display: block;
 }
@@ -73,10 +75,6 @@ li {
 	background: none;
 }
 
-.character-picture-p1 {
-	height:200px
-}
-
 #button, #retry,#FIGHT{
 	background: none;
 	border-radius: 2px;
@@ -100,10 +98,6 @@ li {
 	height:100px;
 	margin-right: 10px;
 }
-.pokemon-picture {
-	height:200px;
-}
-
 
 #endscreen{
 	position:absolute;
@@ -161,14 +155,9 @@ li {
 		opacity: 1;
 	}
 }
-.picture-inactive{
-	display:none;
-}
-.winner-picture{
+
+.winner-picture, .pokemon-picture, .character-picture-p1{
 	height: 200px;
-}
-.loser-picture{
-	display:none;
 }
 .text {
 	display:flex;

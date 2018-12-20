@@ -1,30 +1,3 @@
-/*const siteTitle = document.querySelector('#site-title');
-console.log(siteTitle)
-const statList = document.querySelectorAll('.stat');
-statList.forEach(function(element) {console.log(element.innerHTML);})
-
-const changeImg = (value) => {
-	const cur = document.querySelector('.picture-active');
-	cur.classList.remove('picture-active');
-	const newCur = document.querySelector(`#${value}`);
-	newCur.classList.add('picture-active');
-};
-
-const openModule = (button, popup, endscreen) => {
-	button.preventDefault();
-	popup.style.display = "block";
-	endscreen.style.display = "block";
-	characterName.innerHTML = name.innerHTML;
-	const character = document.querySelector('#end-picture');
-	const activepic = document.querySelector('.picture-active');
-	character.style.background = `url('${activepic.src}') no-repeat top`;
-};
-
-button.addEventListener('click', event => openModule(event, module, fond));
-*/
-//poke gamble
-
-
 //CHANGER NOMS PLAYERS
 const nameInput1 = document.querySelector('#inputName1');
 const name1p1 = document.querySelector('#name1');
@@ -46,16 +19,13 @@ betInput.addEventListener('keyup', event => changeBet(event.target.value,bet));
 
 //POPUP
 const openModule = (button, popup, modal) => {
-	//button.preventDefault();
 	popup.style.display = "block";
 	modal.style.display = "block";
-	//characterName.innerHTML = name.innerHTML;
 	const character = document.querySelector('.winner-picture');
 	const activepic = document.querySelector('.picture-active');
 	character.style.background = `url('${activepic.src}') no-repeat top`;
 };
 const closeModule = (button, popup, modal) => {
-	//button.preventDefault();
 	popup.style.display = "none";
 	modal.style.display = "none";
 };
@@ -102,7 +72,7 @@ const selectType = typesList => {
 		return typesList.types[nb];
 }
 	
-//select type for the first pokemon	
+//CHOIX DU TYPE POUR LE PREMIER POKEMON	
 	const type1 = selectType(typesList);
 	console.log(type1)
 
@@ -138,7 +108,7 @@ fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(
 });
 
 
-//select type for the second pokemon
+//CHOIX DU TYPE POUR LE SECOND POKEMON
 const type2 = selectType(typesList);
 console.log(type2)
 
@@ -175,7 +145,7 @@ fetch('https://pokeapi.co/api/v2/type/').then(response => response.json()).then(
 
 
 
-//CHANGER LES NOMS SUR LE POPUP
+//CHANGER LES NOMS SUR LE POPUP ET LE GIF
 
 const nameWinner=document.querySelector('#nameWinner');
 const nameLoser=document.querySelector('#nameLoser');
